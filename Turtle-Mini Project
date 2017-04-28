@@ -1,24 +1,31 @@
 # Learning-Python-
 import turtle
 
-def draw_triangle(some_turtle):
-    for i in range(1,4):
-        some_turtle.forward(100)
-        some_turtle.right(120)
-        some_turtle.speed(0)
+def draw_square(some_turtle):
+        times = 0
+        while times < 4:
+            some_turtle.forward(100)
+            some_turtle.left(90)
+            times = times + 1
 
-def draw_flower():
+def draw_art():
     window = turtle.Screen()
-    window.bgcolor("red")
+    window.bgcolor("purple")
+    #create the turtle Brad
+    brad = turtle.Turtle()
+    brad.shape("circle")
+    brad.color("blue")
+    brad.speed(3)
 
-    grace = turtle.Turtle()
-    grace.shape("turtle")
-    grace.color("blue")
-    grace.speed(0)
-    for i in range (1, 37):
-        draw_triangle(grace)
-        grace.right(10)
-    grace.left(-90)
-    grace.forward(400)
+    i = 0
+    while i < 37:
+        draw_square(brad)
+        brad.left(10)
+        i = i + 1
+    else:
+        brad.right(100)
+        brad.forward(250)
+
     window.exitonclick()
-draw_flower()
+draw_art()
+
