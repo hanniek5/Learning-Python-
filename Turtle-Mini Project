@@ -1,0 +1,24 @@
+# Learning-Python-
+import turtle
+
+def draw_triangle(some_turtle):
+    for i in range(1,4):
+        some_turtle.forward(100)
+        some_turtle.right(120)
+        some_turtle.speed(0)
+
+def draw_flower():
+    window = turtle.Screen()
+    window.bgcolor("red")
+
+    grace = turtle.Turtle()
+    grace.shape("turtle")
+    grace.color("blue")
+    grace.speed(0)
+    for i in range (1, 37):
+        draw_triangle(grace)
+        grace.right(10)
+    grace.left(-90)
+    grace.forward(400)
+    window.exitonclick()
+draw_flower()
